@@ -9,19 +9,12 @@ body{
 
 header{
     text-align: left;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
     background-color:#1f1f1f;
 }
 
-footer{
-    padding: 1.5rem 0;
-    color: #f1f1f1;
-    background-color:#1f1f1f;
-}
-
-.content{
+.container{
     margin: 0 0.5rem;
-    padding: 0 0.5rem;
 }
 
 h2{
@@ -39,16 +32,19 @@ ol{
 #logo{
     color:#f1f1f1;
     text-decoration: none;
-    padding: 0.5rem;
 }
 
 #profile{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-    height: 80vh;
+    height: 90vh;
     background-color: #fafafa;
+}
+
+#profile-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem 0;
 }
 
 #profile-img{
@@ -57,7 +53,8 @@ ol{
 }
 
 #profile-text{
-    margin: 1rem 0;
+    font-size: large;
+    padding: 2rem;
 }
 
 #profile-text:first-child{
@@ -74,8 +71,14 @@ ol{
 
 
 .subtitle{
+    display: flex;
+    justify-content: center;
     font-size: 1.5rem;
-    margin: 2rem;
+    padding: 5rem 2rem 2rem 2rem;
+}
+
+#skills .container{
+    height: 100%;
 }
 
 .skill-img{
@@ -96,11 +99,22 @@ ol{
 #work-together{
     position: relative;
     height: 100vh;
+}
+
+#work-together .container{
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: space-between;
-    background-color: #fafafa;
+    justify-content: space-between;
+}
+
+#work-together-text{
+    font-size: large;
+    padding: 0 3rem 0 3rem;
+}
+
+#social-media-links{
+    margin-bottom: 3rem;
 }
 
 .contact-link{
@@ -128,14 +142,20 @@ button{
     text-decoration: none;
 }
 
+footer{
+    padding: 1.5rem 0;
+    color: #f1f1f1;
+    background-color:#1f1f1f;
+}
+
 @media only screen and (min-width: 600px) {
-    #content{
+    #container{
         width: 90%;
         margin: auto;
     }
 
     #profile-img{
-        max-width: 40%;
+        max-width: 35%;
     }
     .skill-img{
         max-width: 50%;
@@ -143,8 +163,11 @@ button{
 }
 
 @media only screen and (min-width: 1000px) {
-    .content{
+    .container{
         width:1000px;
         margin: auto;
     }    
+    #skill-list{
+        margin-top: 3rem;
+    }
 }
