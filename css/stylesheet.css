@@ -9,8 +9,11 @@ body{
 
 header{
     text-align: left;
-    padding: 0.5rem 0;
     background-color:#1f1f1f;
+}
+
+a{
+    text-decoration: none;
 }
 
 .container{
@@ -21,68 +24,59 @@ h2{
     color:#1f1f1f;;
 }
 
-h2{
-    margin-bottom: 1rem;
-}
-
-ol{
-    margin:0.5rem;
-}
-
 #logo{
     color:#f1f1f1;
-    text-decoration: none;
 }
 
 #profile{
     display: flex;
-    height: 90vh;
+    align-items: center;
+    min-height: 90vh;
     background-color: #fafafa;
 }
 
-#profile-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 2rem 0;
-}
-
-#profile-img{
-    border-radius: 100%;
-    max-width: 50%;
+#profile img{
+    display: none;
+    border-radius: 2%;
 }
 
 #profile-text{
-    font-size: large;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: clamp(1.2rem, 4vw, 1.4rem); 
+    text-align: left;
+    padding: 1.2rem 1.2rem 1.2rem 0.6rem;
 }
 
-#profile-text:first-child{
-    margin-bottom: 5rem;
+#title{
+    font-size: clamp(1rem, 8vw, 2.6rem); 
+    font-family: 'Ubuntu', sans-serif;
+    color: #1f1f1f;
 }
 
 #skills{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #f1f1f1;
 }
 
-
 .subtitle{
     display: flex;
+    font-family: 'Ubuntu', sans-serif;
     justify-content: center;
-    font-size: 1.5rem;
-    padding: 5rem 2rem 2rem 2rem;
+    font-size: clamp(1.4rem, 8vw, 1.8rem);
+    padding: 4.5rem 2rem 0rem 2rem;
 }
 
 #skills .container{
-    height: 100%;
+    min-height: 100vh;
 }
 
 .skill-img{
-    max-width: 40%;
+    max-width: 50%;
     margin: 1rem 0;
 }
 
@@ -90,42 +84,72 @@ ol{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
+    padding: 2.5rem 0;
+    min-height: 50vh;
 }
 
 #skill-list div{
     max-width: 300px;
+    margin-bottom: 1rem;
 }
 
 #work-together{
-    position: relative;
-    height: 100vh;
+    min-height: 90vh;
 }
 
 #work-together .container{
-    height: 100vh;
-    display: flex;
+    display: flex; 
     flex-direction: column;
-    justify-content: space-between;
+}
+
+.content{
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.content div{
+    display: flex;
 }
 
 #work-together-text{
-    font-size: large;
-    padding: 0 3rem 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#msg{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+#work-together img{
+    display: none;
 }
 
 #social-media-links{
-    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 2rem;
 }
 
 .contact-link{
-    display: inline-block;
-    text-decoration: none;
     color:#1f1f1f;
-    padding: 0 1rem 1rem 1rem;
+    font-size: 1.1rem;
+    padding: 1.6% 2%;
+    margin: 2%;
 }
 
 .contact-link:hover{
-    font-weight: bold;
+    border-radius: 2%;
+    color:#fafafa;
+    background-color:#1f1f1f;
 }
 
 button{
@@ -137,36 +161,59 @@ button{
     width: fit-content;
 }
 
-#email{
-    color: white;
-    text-decoration: none;
-}
-
 footer{
-    padding: 1.5rem 0;
+    padding: 1.8rem 0;
     color: #f1f1f1;
     background-color:#1f1f1f;
 }
 
 @media only screen and (min-width: 600px) {
-    #container{
+    .content{
+        padding: 2rem 0rem;
+    }
+
+    #work-together img{
+        min-width: 250px;
+        max-width: 100%;
+        display: block;
+    }
+
+    .container{
         width: 90%;
         margin: auto;
     }
 
-    #profile-img{
-        max-width: 35%;
-    }
     .skill-img{
-        max-width: 50%;
+        max-width: 60%;
     }
 }
 
 @media only screen and (min-width: 1000px) {
+
+    #profile .container{
+        padding: 3rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #profile-text{
+        padding: 0 4rem 0 0;
+    }
+
+    #profile-img-div{
+        max-width: 350px;
+    }
+
+    #profile img{
+        width: 100%;
+        display:initial;
+    }
+
     .container{
-        width:1000px;
+        width:85%;
         margin: auto;
     }    
+
     #skill-list{
         margin-top: 3rem;
     }
